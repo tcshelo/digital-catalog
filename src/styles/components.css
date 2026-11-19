@@ -1,0 +1,341 @@
+@layer components {
+  /* === SUPERFÍCIES & PAINÉIS === */
+  .panel-box {
+    @apply bg-surface border border-border rounded-2xl p-6 shadow-xs;
+  }
+
+  .panel-box-lg {
+    @apply bg-surface border border-border rounded-2xl p-6 sm:p-10 shadow-xs space-y-6;
+  }
+
+  .info-list-box {
+    @apply bg-surface border border-border rounded-2xl p-6 shadow-xs space-y-4 text-sm text-ink-muted;
+  }
+
+  .info-row {
+    @apply flex items-start gap-3;
+  }
+
+  .info-icon {
+    @apply text-primary shrink-0 mt-0.5;
+  }
+
+  /* === TIPOGRAFIA & CABEÇALHOS === */
+  .badge-pill {
+    @apply inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary-soft border border-primary/20 px-3.5 py-1.5 rounded-full;
+  }
+
+  .heading-hero {
+    @apply text-4xl sm:text-5xl font-black text-ink tracking-tight leading-tight;
+  }
+
+  .heading-page {
+    @apply text-3xl sm:text-4xl font-black text-ink tracking-tight;
+  }
+
+  .heading-section {
+    @apply text-xl font-extrabold text-ink;
+  }
+
+  .text-lead {
+    @apply text-ink-muted leading-relaxed text-base;
+  }
+
+  /* === FORMULÁRIOS === */
+  .field-group {
+    @apply space-y-2;
+  }
+
+  .field-label {
+    @apply block text-xs font-bold uppercase tracking-wider text-ink-muted;
+  }
+
+  .field-input {
+    @apply w-full bg-canvas border border-border focus:border-primary focus:bg-surface rounded-xl px-4 py-3 text-sm text-ink outline-none transition-all;
+  }
+
+  .field-textarea {
+    @apply w-full bg-canvas border border-border focus:border-primary focus:bg-surface rounded-xl px-4 py-3 text-sm text-ink outline-none transition-all resize-none;
+  }
+
+  /* === BOTÕES === */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-bold py-3.5 px-6 rounded-xl transition-colors cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary-block {
+    @apply w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 px-6 rounded-xl transition-colors cursor-pointer flex items-center justify-center gap-2;
+  }
+
+  .btn-whatsapp-block {
+    @apply w-full bg-whatsapp hover:bg-whatsapp-hover text-white font-bold py-4 px-6 rounded-xl transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-xs;
+  }
+
+  .btn-ghost-block {
+    @apply w-full bg-surface-muted hover:bg-border/70 text-ink font-semibold py-3 px-5 rounded-xl transition-colors cursor-pointer flex items-center justify-center gap-2 text-sm;
+  }
+
+  .btn-lang {
+    @apply flex items-center gap-2 bg-canvas hover:bg-surface-muted border border-border text-ink px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer;
+  }
+
+  /* === CARDS DE VEÍCULO === */
+  .vehicle-card {
+    @apply bg-surface border border-border rounded-2xl overflow-hidden shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between;
+  }
+
+  .vehicle-card-media {
+    @apply block relative aspect-16/10 overflow-hidden bg-surface-muted;
+  }
+
+  .vehicle-card-img {
+    @apply object-cover w-full h-full transition-transform duration-500;
+  }
+
+  .vehicle-card:hover .vehicle-card-img {
+    @apply scale-105;
+  }
+
+  .vehicle-card-badge {
+    @apply absolute top-3 left-3 text-[11px] font-bold text-ink uppercase tracking-wider bg-surface/95 backdrop-blur-sm px-3 py-1 rounded-full border border-border;
+  }
+
+  .vehicle-card-body {
+    @apply p-6;
+  }
+
+  .vehicle-card-meta {
+    @apply flex items-center justify-between text-xs font-semibold text-ink-muted mb-1;
+  }
+
+  .vehicle-card-title {
+    @apply text-lg font-extrabold text-ink hover:text-primary transition-colors line-clamp-1;
+  }
+
+  .vehicle-card-subtitle {
+    @apply text-ink-muted text-xs mt-1 mb-4;
+  }
+
+  .vehicle-card-price {
+    @apply text-2xl font-black text-ink mb-4;
+  }
+
+  .vehicle-card-specs {
+    @apply grid grid-cols-3 gap-2 pt-4 border-t border-border;
+  }
+
+  .spec-chip {
+    @apply bg-canvas px-2.5 py-2 rounded-lg;
+  }
+
+  .spec-chip-label {
+    @apply block text-[10px] font-medium text-ink-muted uppercase;
+  }
+
+  .spec-chip-value {
+    @apply text-xs font-bold text-ink;
+  }
+
+  .vehicle-card-footer {
+    @apply px-6 pb-6;
+  }
+
+  /* === FILTER SIDEBAR === */
+  .sidebar-box {
+    @apply bg-surface border border-border rounded-2xl p-6 shadow-xs;
+  }
+
+  .sidebar-header {
+    @apply flex items-center justify-between pb-4 mb-5 border-b border-border/60;
+  }
+
+  .sidebar-title-wrap {
+    @apply flex items-center gap-2 text-ink font-bold;
+  }
+
+  .sidebar-icon {
+    @apply text-primary;
+  }
+
+  .btn-clear-filters {
+    @apply inline-flex items-center gap-1 text-xs font-semibold text-red-600 hover:text-red-700 cursor-pointer;
+  }
+
+  .sidebar-groups {
+    @apply space-y-6;
+  }
+
+  .filter-group {
+    @apply border-b border-border/60 pb-5 last:border-b-0 last:pb-0;
+  }
+
+  .filter-group-title {
+    @apply text-xs font-bold uppercase tracking-wider text-ink-muted mb-3;
+  }
+
+  .filter-options {
+    @apply space-y-2;
+  }
+
+  .filter-option-label {
+    @apply flex items-center gap-2.5 text-sm text-ink-muted hover:text-ink cursor-pointer select-none;
+  }
+
+  .filter-checkbox {
+    @apply w-4 h-4 rounded border-border text-primary focus:ring-primary cursor-pointer;
+  }
+
+  .filter-option-active {
+    @apply font-semibold text-ink;
+  }
+
+  .sidebar-footer-count {
+    @apply mt-6 pt-4 border-t border-border/60 text-xs text-ink-muted text-center;
+  }
+
+  /* === FILTER BAR (TOP SEARCH & CATEGORY PILLS) === */
+  .filter-bar-wrap {
+    @apply flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-10;
+  }
+
+  .filter-pills-row {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .filter-pill-btn {
+    @apply px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer bg-surface text-ink-muted hover:text-ink border border-border;
+  }
+
+  .filter-pill-btn-active {
+    @apply px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer bg-primary text-white shadow-xs;
+  }
+
+  .search-box-wrap {
+    @apply relative w-full md:w-80;
+  }
+
+  .search-box-icon {
+    @apply absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted;
+  }
+
+  .search-box-input {
+    @apply w-full bg-surface border border-border focus:border-primary rounded-xl pl-10 pr-9 py-2.5 text-sm text-ink outline-none transition-colors;
+  }
+
+  .search-box-clear {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink cursor-pointer;
+  }
+
+  /* === HERO SECTION === */
+  .hero-section {
+    @apply bg-canvas border-b border-border py-16 lg:py-24;
+  }
+
+  .hero-grid {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center;
+  }
+
+  .hero-content {
+    @apply lg:col-span-6 space-y-6;
+  }
+
+  .hero-actions {
+    @apply flex flex-col sm:flex-row gap-4;
+  }
+
+  .hero-stats {
+    @apply grid grid-cols-3 gap-6 pt-6 border-t border-border;
+  }
+
+  .hero-stat-value {
+    @apply text-2xl sm:text-3xl font-black text-ink;
+  }
+
+  .hero-stat-label {
+    @apply text-xs text-ink-muted mt-1;
+  }
+
+  .hero-media-col {
+    @apply lg:col-span-6;
+  }
+
+  .hero-media-frame {
+    @apply aspect-16/10 rounded-3xl overflow-hidden shadow-md border border-border bg-surface-muted;
+  }
+
+  .hero-media-img {
+    @apply w-full h-full object-cover;
+  }
+
+  /* === BRANDS STRIP === */
+  .brands-strip {
+    @apply bg-surface border-b border-border py-6;
+  }
+
+  .brands-strip-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center md:justify-between gap-6;
+  }
+
+  .brand-wordmark {
+    @apply text-sm sm:text-base font-black tracking-widest text-ink-muted/80 select-none;
+  }
+
+  /* === FEATURES SECTION === */
+  .features-section {
+    @apply bg-canvas border-t border-b border-border py-20;
+  }
+
+  .features-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .features-header {
+    @apply max-w-2xl mb-12 space-y-2;
+  }
+
+  .features-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+
+  .feature-card {
+    @apply bg-surface border border-border p-6 rounded-2xl shadow-xs space-y-3;
+  }
+
+  .feature-icon-box {
+    @apply w-11 h-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center;
+  }
+
+  .feature-title {
+    @apply text-base font-bold text-ink;
+  }
+
+  .feature-desc {
+    @apply text-sm text-ink-muted leading-relaxed;
+  }
+
+  /* === CONCIERGE BANNER === */
+  .concierge-section {
+    @apply bg-surface py-16;
+  }
+
+  .concierge-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .concierge-box {
+    @apply rounded-3xl bg-canvas border border-border p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8;
+  }
+
+  .concierge-copy {
+    @apply max-w-2xl space-y-3;
+  }
+
+  .concierge-title {
+    @apply text-2xl sm:text-3xl font-black text-ink;
+  }
+
+  .concierge-desc {
+    @apply text-ink-muted text-sm sm:text-base leading-relaxed;
+  }
+
+}

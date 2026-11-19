@@ -1,0 +1,124 @@
+@layer components {
+  .app-shell {
+    @apply min-h-screen flex flex-col justify-between bg-canvas text-ink;
+  }
+
+  .page-wrapper {
+    @apply bg-canvas min-h-screen py-12;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* === NAVBAR === */
+  .site-header {
+    @apply sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-border;
+  }
+
+  .header-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between;
+  }
+
+  .brand-logo {
+    @apply text-2xl font-black tracking-tight text-ink;
+  }
+
+  .brand-logo-accent {
+    @apply text-primary ml-1;
+  }
+
+  .nav-desktop {
+    @apply hidden md:flex items-center gap-8;
+  }
+
+  .nav-link {
+    @apply text-sm font-bold text-ink-muted hover:text-ink transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-sm font-bold text-primary transition-colors;
+  }
+
+  /* === FOOTER === */
+  .site-footer {
+    @apply bg-surface border-t border-border py-12;
+  }
+
+  .footer-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6;
+  }
+
+  /* === GRIDS DE PÁGINA === */
+  .split-layout-12 {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start;
+  }
+
+  .col-main-8 {
+    @apply lg:col-span-8 space-y-8;
+  }
+
+  .col-side-4 {
+    @apply lg:col-span-4 space-y-6 lg:sticky lg:top-24;
+  }
+
+  .col-info-5 {
+    @apply lg:col-span-5 space-y-6;
+  }
+
+  .col-form-7 {
+    @apply lg:col-span-7;
+  }
+
+  .catalog-layout {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8 items-start;
+  }
+
+  .catalog-sidebar-col {
+    @apply lg:col-span-3;
+  }
+
+  .catalog-grid-col {
+    @apply lg:col-span-9;
+  }
+
+  .vehicles-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .vehicles-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .header-actions {
+        @apply flex items-center gap-3;
+    }
+
+    .btn-lang-icon {
+        @apply text-primary;
+    }
+
+    .btn-mobile-menu {
+        @apply md:hidden flex items-center justify-center bg-canvas hover:bg-surface-muted border border-border text-ink p-2 rounded-xl transition-colors cursor-pointer;
+    }
+
+    .nav-mobile-drawer {
+        @apply md:hidden bg-surface border-b border-border px-4 py-4 flex flex-col gap-4;
+    }
+
+    .footer-brand {
+        @apply text-xl font-black tracking-tight text-ink;
+    }
+
+    .footer-copy {
+        @apply text-xs text-ink-muted mt-1;
+    }
+
+    .footer-nav {
+        @apply flex items-center gap-6 text-sm font-semibold text-ink-muted;
+    }
+
+    .footer-link {
+        @apply hover:text-primary transition-colors;
+    }
+}

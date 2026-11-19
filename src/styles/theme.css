@@ -1,0 +1,54 @@
+:root {
+  /* Cores da Marca (Troque aqui para adaptar para outro cliente) */
+  --color-primary: #1d4ed8;       /* blue-700 */
+  --color-primary-hover: #1e40af; /* blue-800 */
+  --color-primary-soft: #eff6ff;  /* blue-50 */
+
+  /* Superfícies & Fundos */
+  --color-canvas: #f8fafc;        /* slate-50 (fundo geral da página) */
+  --color-surface: #ffffff;       /* white (cards, header, sidebar) */
+  --color-surface-muted: #f1f5f9; /* slate-100 (inputs e badges internos) */
+
+  /* Tipografia & Bordas */
+  --color-ink: #0f172a;           /* slate-900 (títulos e textos principais) */
+  --color-ink-muted: #475569;     /* slate-600 (descrições e subtítulos) */
+  --color-border: #e2e8f0;        /* slate-200 */
+
+  /* Ações de Conversão */
+  --color-whatsapp: #059669;      /* emerald-600 */
+  --color-whatsapp-hover: #047857;/* emerald-700 */
+}
+
+/* Mapeia as variáveis para classes nativas do Tailwind v4 */
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-soft: var(--color-primary-soft);
+  --color-canvas: var(--color-canvas);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-border: var(--color-border);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-whatsapp-hover: var(--color-whatsapp-hover);
+}
+
+/* Classes utilitárias reutilizáveis para manter o JSX enxuto */
+@layer components {
+  .card-panel {
+    @apply bg-surface border border-border rounded-2xl shadow-xs;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-bold rounded-xl transition-colors cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-whatsapp {
+    @apply bg-whatsapp hover:bg-whatsapp-hover text-white font-bold rounded-xl transition-colors cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .input-field {
+    @apply w-full bg-canvas border border-border focus:border-primary focus:bg-surface rounded-xl px-4 py-2.5 text-sm text-ink outline-none transition-all;
+  }
+}

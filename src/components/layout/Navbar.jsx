@@ -12,26 +12,23 @@ export default function Navbar({ currentLang }) {
   };
 
   const navItems = [
-    { path: '/', labelToken: 1008 },          // Início
-    { path: '/acervo', labelToken: 1000 },    // Acervo
-    { path: '/consultoria', labelToken: 1002 } // Consultoria VIP
+    { path: '/', labelToken: 1008 },
+    { path: '/acervo', labelToken: 1000 },
+    { path: '/consultoria', labelToken: 1002 },
   ];
 
   const getLinkClass = ({ isActive }) =>
-    `text-sm font-bold tracking-wide transition-colors ${
-      isActive ? 'text-amber-400' : 'text-zinc-300 hover:text-white'
-    }`;
+    isActive ? 'nav-link-active' : 'nav-link';
 
   return (
-    <header className="sticky top-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-black tracking-tighter text-white">
+    <header className="site-header">
+      <div className="header-inner">
+        <Link to="/" className="brand-logo">
           {BRAND_CONFIG.brandName}
-          <span className="text-amber-400 ml-1">{BRAND_CONFIG.brandHighlight}</span>
+          <span className="brand-logo-accent">{BRAND_CONFIG.brandHighlight}</span>
         </Link>
 
-        {/* Menu Desktop */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="nav-desktop">
           {navItems.map((item) => (
             <NavLink key={item.path} to={item.path} className={getLinkClass}>
               {getToken(item.labelToken)}
@@ -40,19 +37,14 @@ export default function Navbar({ currentLang }) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer"
-            aria-label="Toggle Language"
-          >
-            <Globe size={15} className="text-amber-400" />
+          <button onClick={toggleLanguage} className="btn-lang">
+            <Globe size={15} className="text-primary" />
             <span>{currentLang === 'PT' ? 'PT-BR' : 'EN-US'}</span>
           </button>
 
-          {/* Botão Menu Mobile */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-zinc-300 hover:text-white bg-zinc-900 rounded-xl border border-zinc-800 cursor-pointer"
+            className="md:hidden btn-lang"
             aria-label="Menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -60,9 +52,8 @@ export default function Navbar({ currentLang }) {
         </div>
       </div>
 
-      {/* Menu Mobile Expandido */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-zinc-950 border-b border-zinc-800 px-4 py-4 flex flex-col gap-4">
+        <nav className="md:hidden bg-surface border-b border-border px-4 py-4 flex flex-col gap-4">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
