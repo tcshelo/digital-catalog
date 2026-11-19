@@ -1,0 +1,75 @@
+export const enUS = {
+  // Navigation & Hero (1000 - 1019)
+  1000: 'Inventory',
+  1001: 'Why Us',
+  1002: 'VIP Concierge',
+  1003: 'Engineering, Exclusivity, and Performance in Every Detail.',
+  1004: 'Strict curation of premium and sports vehicles with certified history and tailored concierge service.',
+  1005: 'EXCLUSIVE SHOWROOM',
+  1006: 'Explore Inventory',
+  1007: 'Speak with a Specialist',
+  1008: 'Home',
+  1009: 'Featured Inventory',
+  1010: 'Certified Inspection',
+  1011: 'Vehicles Delivered',
+  1012: 'Nationwide Logistics',
+
+  // Filters & Search (1020 - 1029)
+  1020: 'Search by model, brand, or SKU...',
+  1021: 'All Models',
+  1022: 'Luxury SUVs',
+  1023: 'Executive Sedans',
+  1024: 'Electric & Hybrid',
+  1025: 'No vehicles found matching your selected criteria.',
+  1026: 'Reset Search',
+
+  // Why Us Section (1030 - 1039)
+  1028: 'EXCELLENCE & PROVENANCE',
+  1029: 'The Apex Curation Standard',
+  1030: 'Rigorous Technical Inspection',
+  1031: 'Every vehicle undergoes a multi-point structural and mechanical inspection before joining our showroom.',
+  1032: 'Certified History',
+  1033: 'Transparent documentation, authorized dealer service records, and guaranteed provenance.',
+  1034: 'Nationwide Enclosed Delivery',
+  1035: 'Insured enclosed transport delivered directly to your doorstep anywhere in the country.',
+  1036: 'VIP Concierge Service',
+  1037: 'Dedicated specialists for tailored financing, trade-in appraisal, and private viewing appointments.',
+
+  // Labels & Card/Modal Actions (1040 - 1069)
+  1040: 'Details & Specs',
+  1041: 'Request Quote via WhatsApp',
+  1042: 'Technical Specifications',
+  1043: 'Equipment & Packages',
+  1044: 'Transmission',
+  1045: 'Powertrain',
+  1046: 'Mileage',
+  1047: 'Horsepower',
+  1048: 'In Stock',
+  1049: 'Single Owner',
+
+  // Technical Values (1070 - 1089)
+  1070: '8-Speed Automatic',
+  1071: '2.0 Turbo Gasoline',
+  1072: '100% Electric',
+  1073: 'Plug-in Hybrid',
+  1074: 'Panoramic glass sunroof',
+  1075: 'Nappa leather sport seats',
+  1076: 'Premium surround sound system',
+  1077: 'Full semi-autonomous driving suite',
+  1078: '360° surround cameras with night vision',
+  1079: 'Adaptive air suspension',
+
+  // VIP Banner & WhatsApp (1090 - 1099)
+  1090: 'Hello! I would like to request a quote and more information about the following vehicle from your showroom:',
+  1091: 'Hello! I would like to request VIP concierge sourcing for a specific vehicle.',
+  1092: 'Looking for a specific configuration?',
+  1093: 'Our sourcing specialists can locate the exact model, engine, color, and option package you desire.',
+  1094: 'Request Custom Sourcing',
+  1095: 'Desired Make & Model',
+  1096: 'Specifications & Preferences',
+
+  // Vehicle Descriptions (2000+)
+  2001: 'High-performance SUV combining commanding presence, handcrafted interior, and agile dynamics.',
+  2002: 'Executive sedan offering a seamless balance of acoustic comfort, onboard tech, and instant response.',
+  2003: 'All-electric Gran Turismo featuring instant torque, ultra-fast charging, and an immersive digital cockpit.'
+};
